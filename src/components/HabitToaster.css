@@ -1,0 +1,94 @@
+.habit-toaster {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toaster-content {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 280px;
+  max-width: 400px;
+  border-left: 4px solid #6366f1;
+}
+
+.toaster-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+}
+
+.toaster-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.toaster-btn {
+  width: 36px;
+  height: 36px;
+  border: 2px solid;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.toaster-skip {
+  border-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.toaster-skip:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.toaster-complete {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.toaster-complete:hover {
+  background: #f0f9ff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+  .habit-toaster {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .toaster-content {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
